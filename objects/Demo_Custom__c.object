@@ -1,5 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label>Demo Custom</label>
+    <pluralLabel>Demo Customs</pluralLabel>
+    <nameField>
+        <label>Demo Name</label>
+        <type>Text</type>
+    </nameField>
+    <deploymentStatus>Deployed</deploymentStatus>
+    <sharingModel>ReadWrite</sharingModel>
+
     <fields>
         <fullName>Field_One__c</fullName>
         <defaultValue>false</defaultValue>
@@ -7,6 +16,7 @@
         <trackTrending>false</trackTrending>
         <type>Checkbox</type>
     </fields>
+
     <fields>
         <fullName>Field_Two__c</fullName>
         <externalId>false</externalId>
@@ -16,14 +26,18 @@
         <type>Email</type>
         <unique>false</unique>
     </fields>
+
     <validationRules>
         <fullName>DemoValidationRuleOne</fullName>
         <active>true</active>
         <description>created for Demo.</description>
-        <errorConditionFormula>AND(
- Field_One__c,
- ISBLANK(Field_Two__c)
-)</errorConditionFormula>
+        <errorConditionFormula>
+            AND(
+                Field_One__c,
+                ISBLANK(Field_Two__c)
+            )
+        </errorConditionFormula>
         <errorMessage>Please enter Field two if Field one is checked.</errorMessage>
     </validationRules>
 </CustomObject>
+
