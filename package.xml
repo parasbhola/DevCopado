@@ -17,6 +17,10 @@
     <name>ApexPage</name>
   </types>
   <types>
+    <members>Demo_Custom__c</members>
+    <name>CustomObject</name>
+</types>
+  <types>
     <members>*</members>
     <name>ApexTrigger</name>
   </types>
